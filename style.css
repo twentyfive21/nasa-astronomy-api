@@ -64,6 +64,7 @@ header nav {
     font-size: 20px;
     margin-bottom: 10px;
     letter-spacing: 1px;
+    border: none;
 }
 /* ~~~~~~~~ search section ~~~~~~~~~~~~~ */
 .search {
@@ -71,7 +72,6 @@ header nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
     color: white;
     letter-spacing: 2px;
     font-size: 20px;
@@ -94,6 +94,7 @@ header nav {
     font-size: 18px;
     background-color: var(--button-color);
     color: white;
+    border: none;
 }
 /* ~~~~~~~~ footer ~~~~~~~~~~~~~ */
 footer {
@@ -107,12 +108,12 @@ footer {
 .details-container {
     display: flex;
     justify-content: space-around;
-    padding: 50px 50px;
+    padding: 20px 50px;
 }
 .details-container img {
-  width: 55%;
-  height: 600px;
-object-fit: cover;
+    width: 700px;
+    height: 600px;
+    object-fit: cover;
 }
 .details-container section {
     display: flex;
@@ -122,5 +123,6 @@ object-fit: cover;
     font-size: 18px;
     padding: 0px 70px;
     color: whitesmoke;
+    line-height: 25px;
     letter-spacing: 2px;
 }
