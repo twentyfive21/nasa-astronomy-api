@@ -10,10 +10,11 @@ const detailsContainer = document.querySelector(".details-container");
 // console.log(detailsContainer)
 
 function getAstronomy () {
-    fetch('https://jsonplaceholder.typicode.com')
+    fetch(`https://api.nasa.gov/planetary/apod?api_key=${key}`)
     .then((res) => res.json())
     .then((json) => {
         const astronomyData = json;
+        displayAstronomy(astronomyData);
         console.log(astronomyData);
     })
     .catch((error) => {{
@@ -21,25 +22,34 @@ function getAstronomy () {
         imageError();
     }});
 }
+// getAstronomy();
+// displays the images and data fetched 
+function displayAstronomy (astronomyData) {
+    setImg(image, `${astronomyData.url}`);
+    setText(imageDate, `${astronomyData.date}`);
+    setText(imageTitle, `${astronomyData.title}`);
+    setText(imageDescription, `${astronomyData.explanation}`);
+    console.log(astronomyData.url);
+    console.log(astronomyData.date);
+    console.log(astronomyData.title);
+    console.log(astronomyData.explanation);
+}
 
 
+// sets image
+function setImg (element, imgSrc) {
+    if(imgSrc === undefined){
+        element.setAttribute("src", imgSrc);
+    } 
+     element.setAttribute("src", imgSrc);
+    }
 
-// // sets image
-// function setImg (element, imgSrc) {
-//     if(imgSrc === undefined){
-//         element.setAttribute("src", imgSrc);
-//     } 
-//      element.setAttribute("src", imgSrc);
-//     }
+// sets text
+function setText (element, string ) {
+    element.innerText = string;
+     }
 
-// function setText (element, string ) {
-//     element.innerText = string;
-//      }
-
-// function displayAstronomy () {
-
-// }
-
+// displays when nasa api is down 
 function imageError () {
     detailsContainer.innerHTML = `<img src="/images/filler.jpeg" alt="astronomy image" id="image">
     <section>
@@ -52,4 +62,3 @@ function imageError () {
     </section>`;
   }
 
-getAstronomy()
