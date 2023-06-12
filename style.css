@@ -131,6 +131,9 @@ footer {
     line-height: 25px;
     letter-spacing: 2px;
 }
+.error {
+    color: lightcoral;
+}
 /* ~~~~~~~~ media queries ipad & iphone index page ~~~~~~~~~~~~~ */
 @media (max-width: 850px) {
     .explore {
