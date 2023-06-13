@@ -80,6 +80,12 @@ header nav {
     color: white;
     letter-spacing: 2px;
     font-size: 20px;
+    text-align: center;
+    padding: 20px 20px;
+}
+#invalid {
+    padding-top: 10px;
+    color: lightcoral;
 }
 .search input {
     width: 180px;
