@@ -22,6 +22,7 @@ Note: if you wish to do this project you will need to go to nasa's site and requ
 Explore the website! You can view the latest Astronomy Picture of the Day on the main page or search for images from specific dates on the image viewing page.
 
 Acknowledgements :
+"Icon made by https://www.flaticon.com/authors/freepik from www.flaticon.com"
 The Astronomy Picture of the Day is provided by NASA. Thanks to NASA for making the API available for public use.
 The project was inspired by the NASA API and the desire to create an interactive website showcasing stunning astronomical images.
 [https://apod.nasa.gov/apod/astropix.html].
