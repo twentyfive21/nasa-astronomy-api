@@ -7,7 +7,6 @@ function getInput () {
 
  input.addEventListener("input", (event) => {
     const selectedDate = new Date(event.target.value);
-
     if (selectedDate > currentDate) {
         invalid.innerHTML = "Please select a date not greater than the current day."
     } else if (selectedDate < oldestDate) {
@@ -15,8 +14,6 @@ function getInput () {
     } else {
     searchBtn.href = `details.html?&date=${event.target.value}`; // date
     } 
-    console.log(`select ${selectedDate}`)
-    console.log(`curr ${currentDate}`)
  })
 }
 getInput();

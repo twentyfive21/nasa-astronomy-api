@@ -5,48 +5,62 @@ const imageTitle = document.getElementById("image-title");
 const imageDescription = document.getElementById("image-description");
 const detailsContainer = document.querySelector(".details-container");
 
-// calls data for the current day
-function getAstronomy () {
-    fetch(`https://api.nasa.gov/planetary/apod?api_key=${key}`)
-    .then((res) => res.json())
-    .then((json) => {
-        const astronomyData = json;
-        displayAstronomy(astronomyData);
-        console.log(astronomyData);
-    })
-    .catch((error) => {
-        imageError();
-    });
-}
-
 let currentId;
 window.onload = function () {
   const urlParams = new URLSearchParams(window.location.search);
   currentId = urlParams.get("date"); // = 2023-06-01
+  console.log(currentId);
   validateDate(currentId);
   function validateDate(currentId) {
     const dateSyntax = /^\d{4}-\d{2}-\d{2}$/;
     const bool = dateSyntax.test(currentId);
-    if(bool){
+    if (bool){
         selectedAstronomy();
     } else {
         getAstronomy();
     }
-    console.log(bool)
+
   }
 };
 
-// calls data for the day chosen
-function selectedAstronomy () {
-    fetch(`https://api.nasa.gov/planetary/apod?api_key=${key}&date=${currentId}`)
-    .then((res) => res.json())
-    .then((json) => {
+// gets image for the current day 
+function getAstronomy() {
+    let timeoutId = setTimeout(() => {
+      imageError();
+    }, 1000);
+  
+    fetch(`https://api.nasa.gov/planetary/apod?api_key=${key}`)
+      .then((res) => {
+        clearTimeout(timeoutId);
+        return res.json();
+      })
+      .then((json) => {
         const astronomyData = json;
         displayAstronomy(astronomyData);
-    })
-    .catch((error) => {
+      })
+      .catch((error) => {
         imageError();
-    });
+      });
+  }
+  
+// gets image for the selected day 
+function selectedAstronomy () {   
+    let timeoutId = setTimeout(() => {
+        imageError();
+      }, 1000);
+
+    fetch(`https://api.nasa.gov/planetary/apod?api_key=${key}&date=${currentId}`)
+        .then((res) => {
+          clearTimeout(timeoutId);
+          return res.json();
+        })
+        .then((json) => {
+          const astronomyData = json;
+          displayAstronomy(astronomyData);
+        })
+        .catch((error) => {
+          imageError();
+        });
 }
 // displays the images and data fetched 
 function displayAstronomy (astronomyData) {
