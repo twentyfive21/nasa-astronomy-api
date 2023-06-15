@@ -4,7 +4,7 @@ function getInput () {
  const invalid = document.getElementById("invalid");
  const oldestDate = new Date("1995-06-20");
  const currentDate = new Date();
- 
+
  input.addEventListener("input", (event) => {
     const selectedDate = new Date(event.target.value);
 
@@ -15,9 +15,10 @@ function getInput () {
     } else {
     searchBtn.href = `details.html?&date=${event.target.value}`; // date
     } 
+    console.log(`select ${selectedDate}`)
+    console.log(`curr ${currentDate}`)
  })
 }
-
 getInput();
 
 
