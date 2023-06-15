@@ -27,7 +27,7 @@ window.onload = function () {
 function getAstronomy() {
     let timeoutId = setTimeout(() => {
       imageError();
-    }, 1000);
+    }, 5000);
   
     fetch(`https://api.nasa.gov/planetary/apod?api_key=${key}`)
       .then((res) => {
