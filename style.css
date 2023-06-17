@@ -121,6 +121,7 @@ footer {
     padding: 65px 50px;
 }
 .details-container img {
+    width: 100%;
     height: 500px;
     object-fit: cover;
 }
@@ -200,7 +201,6 @@ embed {
         padding: 10px;
     }
     .details-container img {
-        width: 100%;
         height: 600px;
         padding-bottom: 150px;
     }
