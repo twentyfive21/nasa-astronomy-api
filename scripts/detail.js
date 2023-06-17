@@ -8,7 +8,6 @@ let currentId;
 window.onload = function () {
   const urlParams = new URLSearchParams(window.location.search);
   currentId = urlParams.get("date"); // = 2023-06-01
-  console.log(currentId);
   validateDate(currentId);
   function validateDate(currentId) {
     const dateSyntax = /^\d{4}-\d{2}-\d{2}$/;
@@ -35,6 +34,7 @@ function getAstronomy() {
       })
       .then((json) => {
         const astronomyData = json;
+        console.log(astronomyData);
         displayAstronomy(astronomyData);
       })
       .catch((error) => {
@@ -55,29 +55,42 @@ function selectedAstronomy () {
         })
         .then((json) => {
           const astronomyData = json;
+          console.log(astronomyData);
           displayAstronomy(astronomyData);
         })
         .catch((error) => {
           imageError();
         });
 }
-// displays the images and data fetched 
-function displayAstronomy (astronomyData) {
-    setImg(image, `${astronomyData.url}`);
-    setText(imageDate, `${astronomyData.date}`);
-    setText(imageTitle, `${astronomyData.title}`);
-    setText(imageDescription, `${astronomyData.explanation}`);
+
+
+
+// after that deploy 
+// https://render.com/docs/deploy-node-express-app
+// create if else statement to validate if image or video embed youtube 
+function validateMedia (astronomyData) {
+  if (astronomyData.media_type === "video") {
+    image.innerHTML = `<embed
+    src="${astronomyData.url}"
+    wmode="transparent"
+    type="video/mp4"
+    allow="autoplay; encrypted-media; picture-in-picture"
+    allowfullscreen
+    title="Nasa image"
+  >`;
+  } else {
+      image.innerHTML = `<img src="${astronomyData.url}"/>`;
+  }
 }
 
+// displays the images and data fetched 
+function displayAstronomy (astronomyData) {
+  validateMedia(astronomyData);
+  setText(imageDate, `${astronomyData.date}`);
+  setText(imageTitle, `${astronomyData.title}`);
+  setText(imageDescription, `${astronomyData.explanation}`);
+}
 
-
-// sets image
-function setImg (element, imgSrc) {
-    if(imgSrc === undefined){
-        return
-    } 
-     element.setAttribute("src", imgSrc);
-    }
 
 // sets text
 function setText (element, string ) {

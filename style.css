@@ -31,7 +31,6 @@ header nav {
     font-size: 18px;
 }
 .main-container-index {
-    /* border: 2px solid greenyellow; */
     height: 100vh;
 } 
 /* ~~~~~~~~ explore top section ~~~~~~~~~~~~~ */
@@ -119,13 +118,24 @@ footer {
 .details-container {
     display: flex;
     justify-content: space-around;
-    padding: 65px 20px;
+    padding: 65px 50px;
 }
 .details-container img {
-    width: 700px;
-    height: 600px;
+    height: 500px;
     object-fit: cover;
 }
+embed {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#image {
+    width: 400%;
+    height: 500px;
+}
+
 .details-container section {
     display: flex;
     text-align: center;
@@ -182,32 +192,42 @@ footer {
     }
 }
 /* ~~~~~~~~ media queries ipad and iphone details page ~~~~~~~~~~~~~ */
-@media (max-width: 1030px) {
+@media (max-width: 1290px) {
     .details-container {
-        align-items: center;
         flex-direction: column;
     }
+    .details-container section {
+        padding: 10px;
+    }
     .details-container img {
-        width: 900px;
+        width: 100%;
         height: 600px;
-        padding: 20px 0;
+        padding-bottom: 150px;
     }
     .details-container h1, h3 {
         padding: 15px 0;
     }
-}
-@media (max-width: 850px) {
-    .details-container img {
-        width: 700px;
+    #image {
+        width: 100%;
         height: 500px;
     }
 }
-@media (max-width: 480px) {
+@media (max-width: 850px) {
     .details-container img {
-        width: 300px;
+        height: 500px;
+    }
+}
+@media (max-width: 550px) {
+    .details-container img {
         height: 400px;
+        padding-bottom: 0px;
     }
     .details-container section {
         padding: 0 10px;
     }
+    #image {
+        width: 100%;
+        height: 500px;
+    }
+
 }
