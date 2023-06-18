@@ -26,7 +26,7 @@ function getAstronomy() {
     let timeoutId = setTimeout(() => {
       imageError();
     }, 5000);
-  // change to render url 
+
     fetch("https://astronomy-uxjs.onrender.com/")
       .then((res) => {
         clearTimeout(timeoutId);
@@ -45,7 +45,7 @@ function getAstronomy() {
 function selectedAstronomy () {   
     let timeoutId = setTimeout(() => {
         imageError();
-      }, 1000);
+      }, 5000);
 
       fetch("https://astronomy-uxjs.onrender.com/media", {
         method:"POST",
