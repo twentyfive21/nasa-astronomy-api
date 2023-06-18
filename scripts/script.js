@@ -5,6 +5,7 @@ function getInput () {
  const oldestDate = new Date("1995-06-20");
  const currentDate = new Date();
 
+
  input.addEventListener("input", (event) => {
     const selectedDate = new Date(event.target.value);
     if (selectedDate > currentDate) {

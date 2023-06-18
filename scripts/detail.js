@@ -21,6 +21,17 @@ window.onload = function () {
   }
 };
 
+
+fetch(`http://localhost:3001/`)
+.then((res) => {
+    console.log("response");
+    console.log((res));
+    res.json()})
+.then((json) => console.log(json))
+.catch((err) => console.log(err));
+
+
+
 // gets image for the current day 
 function getAstronomy() {
     let timeoutId = setTimeout(() => {
