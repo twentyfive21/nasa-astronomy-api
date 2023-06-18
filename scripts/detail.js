@@ -5,6 +5,7 @@ const imageDescription = document.getElementById("image-description");
 import key from "./key.js";
 const detailsContainer = document.querySelector(".details-container");
 let currentId;
+
 window.onload = function () {
   const urlParams = new URLSearchParams(window.location.search);
   currentId = urlParams.get("date"); // = 2023-06-01
@@ -17,35 +18,22 @@ window.onload = function () {
     } else {
         getAstronomy();
     }
-
   }
 };
-
-
-fetch(`http://localhost:3001/`)
-.then((res) => {
-    console.log("response");
-    console.log((res));
-    res.json()})
-.then((json) => console.log(json))
-.catch((err) => console.log(err));
-
-
 
 // gets image for the current day 
 function getAstronomy() {
     let timeoutId = setTimeout(() => {
       imageError();
     }, 5000);
-  
-    fetch(`https://api.nasa.gov/planetary/apod?api_key=${key}`)
+  // change to render url 
+    fetch(`http://localhost:3001/`)
       .then((res) => {
         clearTimeout(timeoutId);
         return res.json();
       })
       .then((json) => {
         const astronomyData = json;
-        console.log(astronomyData);
         displayAstronomy(astronomyData);
       })
       .catch((error) => {
@@ -59,26 +47,36 @@ function selectedAstronomy () {
         imageError();
       }, 1000);
 
-    fetch(`https://api.nasa.gov/planetary/apod?api_key=${key}&date=${currentId}`)
-        .then((res) => {
-          clearTimeout(timeoutId);
-          return res.json();
-        })
-        .then((json) => {
-          const astronomyData = json;
-          console.log(astronomyData);
-          displayAstronomy(astronomyData);
-        })
-        .catch((error) => {
-          imageError();
-        });
+      fetch("http://localhost:3001/media", {
+        method:"POST",
+        headers:{
+          "Content-Type" : "application/json"
+        },
+        body: JSON.stringify({
+          date: currentId,
+        }),
+      })
+      .then((res) => res.json())
+      .then((json) => {
+        const astronomyData = json;
+        displayAstronomy(astronomyData);
+      })
+      .catch((err) => imageError());
+    // fetch(`https://api.nasa.gov/planetary/apod?api_key=${key}&date=${currentId}`)
+    //     .then((res) => {
+    //       clearTimeout(timeoutId);
+    //       return res.json();
+    //     })
+    //     .then((json) => {
+    //       const astronomyData = json;
+    //       console.log(astronomyData);
+    //       displayAstronomy(astronomyData);
+    //     })
+    //     .catch((error) => {
+    //       imageError();
+    //     });
 }
 
-
-
-// after that deploy 
-// https://render.com/docs/deploy-node-express-app
-// create if else statement to validate if image or video embed youtube 
 function validateMedia (astronomyData) {
   if (astronomyData.media_type === "video") {
     image.innerHTML = `<embed
@@ -101,7 +99,6 @@ function displayAstronomy (astronomyData) {
   setText(imageTitle, `${astronomyData.title}`);
   setText(imageDescription, `${astronomyData.explanation}`);
 }
-
 
 // sets text
 function setText (element, string ) {
