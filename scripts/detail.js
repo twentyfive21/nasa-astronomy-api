@@ -27,7 +27,7 @@ function getAstronomy() {
       imageError();
     }, 5000);
   // change to render url 
-    fetch(`http://localhost:3001/`)
+    fetch("https://astronomy-uxjs.onrender.com/")
       .then((res) => {
         clearTimeout(timeoutId);
         return res.json();
@@ -47,7 +47,7 @@ function selectedAstronomy () {
         imageError();
       }, 1000);
 
-      fetch("http://localhost:3001/media", {
+      fetch("https://astronomy-uxjs.onrender.com/media", {
         method:"POST",
         headers:{
           "Content-Type" : "application/json"
