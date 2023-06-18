@@ -58,6 +58,7 @@ function selectedAstronomy () {
       })
       .then((res) => res.json())
       .then((json) => {
+        clearTimeout(timeoutId);
         const astronomyData = json;
         displayAstronomy(astronomyData);
       })
