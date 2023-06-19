@@ -33,9 +33,6 @@ The project incorporates the following technologies:
 - NASA API: The NASA API provides access to the Astronomy Picture of the Day and relevant details.
 Note: if you wish to do this project you will need to go to nasa's site and request for an api key. Remember DO NOT share your private api key on github unless it is a key that is free and made public. The nasa one is not meant to be shared. 
 ---
-
-Explore the website! You can view the latest Astronomy Picture of the Day on the main page or search for images from specific dates on the image viewing page.
-
 Acknowledgements :
 "Icon made by https://www.flaticon.com/authors/freepik from www.flaticon.com"
 The Astronomy Picture of the Day is provided by NASA. Thanks to NASA for making the API available for public use.
