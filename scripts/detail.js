@@ -2,7 +2,6 @@ const image = document.getElementById("image");
 const imageDate = document.getElementById("image-date");
 const imageTitle = document.getElementById("image-title");
 const imageDescription = document.getElementById("image-description");
-import key from "./key.js";
 const detailsContainer = document.querySelector(".details-container");
 let currentId;
 
