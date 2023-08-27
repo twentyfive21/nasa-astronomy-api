@@ -26,7 +26,7 @@ header nav {
     padding: 20px 30px;
     align-items: center;
     letter-spacing: 6px;
-    font-size: 18px;
+    font-size: 1rem;
 }
 .main-container-index {
     height: 100vh;
@@ -40,7 +40,7 @@ header nav {
     margin-left: 200px;
 }
 .explore h1, h2 {
-    font-size: 50px;
+    font-size: 4rem;
     color: white;
     display: inline;
     letter-spacing: 20px;
@@ -51,7 +51,7 @@ header nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 20px;
+    font-size: 1.3rem;
     align-items: center;
     text-align: center;
     color: white;
@@ -63,7 +63,7 @@ header nav {
     background-color: var(--gold);
     color: white;
     border-radius: 25px;
-    font-size: 20px;
+    font-size: 1.2rem;
     margin-bottom: 10px;
     letter-spacing: 1px;
     border: none;
@@ -76,7 +76,7 @@ header nav {
     align-items: center;
     color: white;
     letter-spacing: 2px;
-    font-size: 20px;
+    font-size: 1.2rem;
     text-align: center;
     padding: 20px 20px;
 }
@@ -88,7 +88,7 @@ header nav {
     width: 180px;
     height: 35px;
     text-align: center;
-    font-size: 18px;
+    font-size: 1.2rem;
     border-radius: 20px;
     margin-top: 8px;
     background-color: #D9D9D9;
@@ -99,7 +99,7 @@ header nav {
     width: 140px;
     height: 30px;
     border-radius: 20px;
-    font-size: 18px;
+    font-size: 1.2rem;
     background-color: var(--button-color);
     color: white;
     border: none;
@@ -110,16 +110,12 @@ footer {
     justify-content: end;
     align-items: end;
     padding: 0 15px;
-    /* border: 2px solid blueviolet; */
 }
 /* ~~~~~~~~ details page ~~~~~~~~~~~~~ */
 .details-container {
     display: flex;
     justify-content: space-around;
     padding: 65px 50px;
-    .details-container {
-        flex-direction: column;
-    }
 }
 .details-container img {
     width: 100%;
@@ -146,14 +142,11 @@ embed {
     font-size: 18px;
     padding: 0px 70px;
     color: whitesmoke;
-    line-height: 25px;
     letter-spacing: 2px;
 }
 .error {
     color: lightcoral;
 }
-
-
 
 /* ~~~~~~~~ media queries ipad & iphone index page ~~~~~~~~~~~~~ */
 @media (max-width: 850px) {

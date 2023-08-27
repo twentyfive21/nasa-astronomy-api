@@ -109,11 +109,11 @@ function setText (element, string ) {
 function imageError () {
     detailsContainer.innerHTML = `<img src="/images/filler.jpeg" alt="astronomy image" id="image">
     <section>
-        <h1 id="image-date">2020 January 5</h1>
-        <h3 id="image-title">A Starry Night of Iceland</h3>
-        <p class="error"> NASA's data is down temporarily. Here is the picture taken on January meanwhile the site is being maintainced. Please check back later! </p><br>
+        <h1 id="image-date">2023 August 14</h1>
+        <h3 id="image-title">The Ring Nebula from Webb</h3>
+        <p class="error">NASA's data is down temporarily. Here is the picture taken in August. Please check back later!</p><br>
         <p id="image-description">
-            Like an illustration in a galactic Just So Story, the Elephant's Trunk Nebula winds through the emission region and young star cluster complex IC 1396, in the high and far off constellation of Cepheus. Seen on the left the cosmic elephant's trunk, also known as vdB 142, is over 20 light-years long. This detailed telescopic view features the bright swept-back ridges and pockets of cool interstellar dust and gas that abound in the region. But the dark, tendril-shaped clouds contain the raw material for star formation and hide protostars within. Nearly 3,000 light-years distant, the relatively faint IC 1396 complex covers a large region on the sky, spanning over 5 degrees. This rendition spans a 1 degree wide field of view though, about the angular size of 2 full moons. Of course the dark shapes below and to the right of the outstretched Elephant's Trunk, are known to some as The Caravan.
+          The Ring Nebula (M57), is more complicated than it appears through a small telescope. The easily visible central ring is about one light-year across, but this remarkable exposure by the James Webb Space Telescope explores this popular nebula with a deep exposure in infrared light. Strings of gas, like eyelashes around a cosmic eye, become evident around the Ring in this digitally enhanced featured image in assigned colors. These long filaments may be caused by shadowing of knots of dense gas in the ring from energetic light emitted within. The Ring Nebula is an elongated planetary nebula, a type of gas cloud created when a Sun-like star evolves to throw off its outer atmosphere to become a white dwarf star. The central oval in the Ring Nebula lies about 2,500 light-years away toward the musical constellation Lyra.
         </p>
     </section>`;
   }
