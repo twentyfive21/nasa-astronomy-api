@@ -31,10 +31,10 @@ The project incorporates the following technologies:
 - CSS: Employed for styling the website and providing an appealing user interface.
 - JavaScript: Utilized for fetching data from the NASA API and handling user interactions.
 - NASA API: The NASA API provides access to the Astronomy Picture of the Day and relevant details.
-Note: if you wish to do this project you will need to go to nasa's site and request for an api key. Remember DO NOT share your private api key on github unless it is a key that is free and made public. The nasa one is not meant to be shared. 
+Note: If you wish to do this project you will need to go to NASA's site and request an API key. Remember DO NOT share your private API key on Git Hub unless it is a key that is free and made public. The NASA one is not meant to be shared. 
 ---
 Acknowledgements :
-"Icon made by https://www.flaticon.com/authors/freepik from www.flaticon.com"
+Icon made by https://www.flaticon.com/authors/freepik 
 The Astronomy Picture of the Day is provided by NASA. Thanks to NASA for making the API available for public use.
 The project was inspired by the NASA API and the desire to create an interactive website showcasing stunning astronomical images.
 [https://apod.nasa.gov/apod/astropix.html].
