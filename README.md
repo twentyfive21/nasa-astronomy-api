@@ -1,8 +1,8 @@
-## NASA Astronomy Picture of the Day Website
+# NASA Astronomy Picture of the Day Website
 ## Click here to view it live : https://explore-astronomy.netlify.app/ !
 ### This project is a website that utilizes the NASA API to showcase the Astronomy Picture of the Day. The website consists of a main page and an image page, allowing users to explore both the current day's image and search for images from specific dates. 
 ---
-## Features: 
+# Features: 
 - Main Page: The main page of the website provides an option to view the picture of the day or to search your own date. 
 - Image Viewing Page: This page allows users to view the Astronomy Picture of the Day in more detail. Users have two options to select an image:
 -  Today's Image: By default, the page displays the image of the current day. Users can get additional information about the image, such as its title, date, and a detailed description.
@@ -25,7 +25,7 @@ During the development of this project, I had the opportunity to learn and achie
 By undertaking this project and collaborating with my mentor and friend, I enhanced my understanding of backend development and acquired practical skills in deploying websites, securing sensitive information, and working with HTTP requests. These newfound skills and experiences will undoubtedly serve as a solid foundation for my future projects and professional growth.
 
 ---
-Technologies Used:
+# Technologies Used:
 The project incorporates the following technologies:
 - HTML: Used for structuring the web pages.
 - CSS: Employed for styling the website and providing an appealing user interface.
