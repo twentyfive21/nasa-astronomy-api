@@ -1,5 +1,5 @@
 ## NASA Astronomy Picture of the Day Website
-## Click here to see it live https://explore-astronomy.netlify.app/ !
+## Click here to view it live : https://explore-astronomy.netlify.app/ !
 ### This project is a website that utilizes the NASA API to showcase the Astronomy Picture of the Day. The website consists of a main page and an image page, allowing users to explore both the current day's image and search for images from specific dates. 
 ---
 ## Features: 
